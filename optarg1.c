@@ -11,7 +11,7 @@ int main(int argc, char* argv[]){
 	
 	int result = 1;
 	for(i = 1; i < argc; i++){
-	   int x =strol(argv[i],NULL,10); //en el primer parametro es lo q tratamos de convertir , 
+	   int x =strtol(argv[i],NULL,10); //en el primer parametro es lo q tratamos de convertir , 
 					  //en el segundo parametro, 
 					  //en el tercero va la base de nuestro numero
 	   result = result * x;
