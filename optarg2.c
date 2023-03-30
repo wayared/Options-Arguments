@@ -34,7 +34,8 @@ int main(int argc, char **argv){
 					cflag ++;
 					fflag++;
 				}
-				printf("You want centigrade\n");
+				//printf("You want centigrade\n");
+				print_farenheit(atof(optarg));
 				break;
 			case 'f':
 				if(fflag){
@@ -44,7 +45,8 @@ int main(int argc, char **argv){
 					fflag++;
 					cflag++;
 				}
-				printf("You want farenheit\n");
+				//printf("You want farenheit\n");
+				print_centigrade(atof(optarg));
 				break;
 			default:
 				printf("Error");
