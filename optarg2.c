@@ -37,6 +37,13 @@ int main(int argc, char **argv){
 				printf("You want centigrade\n");
 				break;
 			case 'f':
+				if(fflag){
+					print("Only one option\n");
+					exit(1);
+				}else{
+					fflag++;
+					cflag++;
+				}
 				printf("You want farenheit\n");
 				break;
 			default:
