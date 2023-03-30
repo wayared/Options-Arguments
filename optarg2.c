@@ -25,7 +25,7 @@ int main(int argc, char **argv){
 	int option;
 	int cflag = 0;
 	int fflag = 0;
-	while ((option = getopt(argc, argv, "cf")) != -1){
+	while ((option = getopt(argc, argv, "c:f:")) != -1){
 		switch (option){
 			case 'c':
 				if(){
