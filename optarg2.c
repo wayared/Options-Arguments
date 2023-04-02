@@ -9,7 +9,7 @@ void print_usage(){
 	exit(2);	
 }
 
-void print_farenheit(){
+void print_farenheit(float temp){
 	float f = ((temp * 9) / 5) + 32;
 	printf("%.2f centigrade is %.2f fareheit\n",temp,f);
 }
@@ -25,10 +25,11 @@ int main(int argc, char **argv){
 	int option;
 	int cflag = 0;
 	int fflag = 0;
-	while ((option = getopt(argc, argv, "c:f:")) != -1){
+	while ((option = getopt(argc, argv, "c:f:")) != -1){ //se coloca : al lado derecho de la opcion que deseas que susargumento sean obligatorios, 
+							     //en este caso no hara la operacion si no le pasas un argumento (el numero de temperatura) 
 		switch (option){
 			case 'c':
-				if(){
+				if(cflag){
 					print_usage();
 				}else {
 					cflag ++;
@@ -39,7 +40,7 @@ int main(int argc, char **argv){
 				break;
 			case 'f':
 				if(fflag){
-					print("Only one option\n");
+					printf("Only one option\n");
 					exit(1);
 				}else{
 					fflag++;
