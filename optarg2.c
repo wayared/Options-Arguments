@@ -36,7 +36,7 @@ int main(int argc, char **argv){
 					fflag++;
 				}
 				//printf("You want centigrade\n");
-				print_farenheit(atof(optarg));
+				print_farenheit(atof(optarg));   //atof convierte el argumento a float
 				break;
 			case 'f':
 				if(fflag){
